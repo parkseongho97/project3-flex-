@@ -423,6 +423,7 @@
   }
   #footer .btmmenu .addr p {
     font-size: 13px;
+    word-break:keep-all;
   }
   #footer span {
     display: block;
