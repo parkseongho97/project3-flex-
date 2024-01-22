@@ -1,0 +1,433 @@
+@media screen and (max-width: 1170px) {
+  .row {
+    margin: 0 auto;
+    max-width: 1170px;
+    padding: 0 10px;
+  }
+}
+@media screen and (max-width: 990px) {
+  #header {
+    background-color: rgb(255, 255, 255);
+    position: static;
+  }
+  #header .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  #header h1 {
+    /* float: left; */
+    padding: 20px;
+  }
+
+  #header .row h1 {
+    /* float: left; */
+    padding: 20px 30px;
+    margin: 0;
+  }
+  #header .menuopen {
+    display: flex;
+    /* float: right; */
+    /* line-height: 85px; */
+    /* height: 85px; */
+    font-size: 25px;
+    align-items: center;
+    margin-right: 30px;
+  }
+  #header #nav {
+    /* float: right; */
+    display: block;
+    width: 100%;
+  }
+  #header #nav .depth1 {
+    /* 자식들을 한줄로 정렬하기 위해 부모한테 display:flex 속성 추가 */
+    display: block;
+  }
+  #header #nav .depth1 > li {
+    /* float: none; */
+    display: block;
+    position: relative;
+    margin: 0px 0px 0px 0px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+  }
+  #header #nav .depth1 > li > a {
+    display: block;
+    padding: 0px 30px;
+    height: auto;
+    line-height: 50px;
+    color: #171717;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  #header #nav .depth1 > li > a:hover {
+    background: #068671;
+    color: white;
+    transition: all 0.2s;
+  }
+  #header #nav .depth1 > li:hover .depth2 {
+    display: block;
+    background-color: #fff;
+    width: 100%;
+  }
+
+  #header #nav .depth1 > li > a::after {
+    display: block;
+    position: absolute;
+    top: 2px;
+    right: 50px;
+    font-size: 13px;
+    font-family: "FontAwesome";
+    content: "\f107";
+    opacity: 0.3;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  #header #nav .depth2 {
+    position: static;
+    top: 100%;
+    left: 0%;
+    width: 100%;
+    background-color: #ffffff;
+    display: none;
+    transition: all 0.2s;
+    font-size: 14px;
+    color: #171717;
+  }
+
+  #header #nav .depth2 > li > a {
+    padding: 10px 30px;
+    display: block;
+    transition: all 0.5s;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 0px solid rgba(0, 0, 0, 0.05);
+    font-size: 12px;
+    text-align: left;
+  }
+  #header #nav .depth1 > li:hover {
+    background: #068671;
+    color: white;
+  }
+  #header #nav .depth2 > li > a:hover {
+    background-color: #25b59d;
+    color: white;
+    display: block;
+  }
+
+  /* 슬라이드구역 */
+  #section .slide .text > img {
+    width: 100%;
+  }
+  #section .slide .text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  #section .slide .text h2 {
+    margin: 0 0 25px;
+    font-weight: bold;
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+    word-break: keep-all;
+  }
+  #section .slide .text p {
+    font-size: 16px;
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+    word-break: keep-all;
+  }
+
+  /* product 구역 */
+  #About .contents ul {
+    /* overflow: hidden; */
+    display: block;
+    text-align: center;
+  }
+  #About .contents ul li {
+    /* float: left; */
+    /* width: 33.33%; */
+    /* text-align: center; */
+    padding: 10px;
+    color: #333;
+  }
+  #About > .contents > .product > li a img {
+    transition: all 0.5s;
+    transform: scale(1.05);
+    transform-origin: center top;
+  }
+  #About > .contents > .product > li a img:hover {
+    transform: scale(1.04);
+  }
+  /* video구역 */
+  #section #creative {
+    /* overflow: hidden; */
+    display: block;
+    padding: 50px 0;
+    background: #fafafa;
+    margin-top: 50px;
+  }
+
+  #section #creative > .videobox video {
+    width: 100%;
+  }
+  #section #creative > .text {
+    float: none;
+    width: 100%;
+    padding: 30px 10px 0px 10px;
+    text-align: left;
+  }
+  #section #creative > .text h2 {
+    font-size: 40px;
+    line-height: 1.2em;
+    border-top: 1px solid #5a370f;
+    padding-top: 30px;
+    color: #5a370f;
+    color: ;
+  }
+  #section #creative .text h2 span {
+    display: block;
+  }
+  #section #creative .text p {
+    font-size: 14px;
+    /* 단어잘림 허용안함 */
+    word-break: keep-all;
+    line-height: 1.5em;
+    padding-right: 100px;
+  }
+  #section #creative .text p strong {
+    display: block;
+    font-size: 20px;
+    padding: 40px 0;
+  }
+
+  #section #creative .text a {
+    display: block;
+    margin-top: 50px;
+  }
+
+  /* item 구역 */
+  #section .items {
+    text-align: center;
+    padding: 120px 0 60px;
+  }
+  #section .items img {
+    width: 100%;
+  }
+
+  #section .itemsName {
+    color: #333;
+  }
+  #section .itemsName span {
+    display: block;
+  }
+  #section .photo1 {
+    /* overflow: hidden; */
+    display: flex;
+  }
+  #section .itemsList ul li {
+    /* float: left; */
+    flex: 1 1 50%;
+    /* width: 50%; */
+    padding: 5px;
+    overflow: hidden;
+  }
+  #section .itemsList ul li > a {
+    overflow: hidden;
+    display: block;
+    position: relative;
+  }
+  #section .itemsList ul li > a .overbox {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 20px;
+    padding-top: 60%;
+    opacity: 0;
+    transition: all 0.5s;
+  }
+  #section .itemsList ul li:hover > a .overbox {
+    opacity: 1;
+  }
+
+  #section .itemsList > .photo1 > li img {
+    transition: all 0.5s;
+  }
+  #section .itemsList > .photo1 > li:hover img {
+    transform: scale(1.2);
+  }
+
+  #section .itemsName > h2 {
+    font-size: 40px;
+    padding-bottom: 30px;
+    font-weight: lighter;
+  }
+  #section .itemsName > p {
+    font-size: 14px;
+    line-height: 1.8em;
+    margin-bottom: 70px;
+  }
+
+  /* 지도구역 */
+  #section .contact {
+    margin-top: -200px;
+    padding: 0px 0 0px 0px;
+    border-bottom: 1px solid rgb(230, 230, 230);
+    width: 100%;
+  }
+  #section .contact .row {
+    /* overflow: hidden; */
+    display: block;
+    width: 100%;
+    margin: 0px;
+  }
+  #section .contact .map {
+    float: none;
+    width: 100%;
+    padding: 0px 10px;
+  }
+
+  #section .contact .query {
+    float: none;
+    width: 100%;
+    background-color: #fff;
+    height: auto;
+    padding: 40px 10px 20px 10px;
+    color: #333;
+  }
+  #section .contact .query h3 {
+    font-size: 20px;
+    color: #e71919;
+  }
+  #section .contact .query p {
+    font-size: 14px;
+  }
+  #section .contact .query p.greeting {
+    padding: 30px 0;
+    font-weight: bold;
+  }
+  #section .contact .query p span {
+    display: block;
+  }
+  #section .contact .query p.address {
+    font-size: 13px;
+    line-height: 1.7em;
+    margin-bottom: 70px;
+  }
+  #section .contact .query p.btn {
+    color: white;
+    margin-bottom: 50px;
+  }
+  #section .contact .query p.btn > a {
+    background: #1a1a1a;
+    padding: 15px 25px;
+    display: inline-block;
+    margin-right: 15px;
+  }
+  #section .contact .query p.btn > a:nth-child(2) {
+    background: #333;
+    padding: 15px 25px;
+    display: inline-block;
+  }
+  #section .best {
+    background: url(../img/service.jpg) right center / cover;
+    height: 580px;
+  }
+  #section .best .row {
+    padding: 100px 0;
+  }
+
+  #section .best h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #262626;
+  }
+  #section .best p {
+    font-size: 12px;
+    padding: 30px;
+  }
+  /* footer구역 */
+
+  #section .best h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #262626;
+  }
+  #section .best p {
+    font-size: 15px;
+    padding: 30px;
+  }
+  #footer {
+    padding: 50px 0;
+  }
+  #footer .row {
+    /* overflow: hidden; */
+    display: flex;
+  }
+  #footer .btmlogo {
+    /* float: left; */
+    flex: 1;
+    margin-top: 20px;
+    /* width: 100%; */
+  }
+  #footer .btmmenu {
+    /* float: right; */
+    flex: 1;
+    /* width: 100%; */
+  }
+  #footer .btmmenu {
+    /* overflow: hidden; */
+    padding: 10px 0;
+  }
+  /* #footer .btmmenu .companyinfo {
+    float: left;
+    width: 100%;
+    color: #333;
+    margin: 20px 0;
+  } */
+  #footer .btmmenu .companyinfo .list {
+    padding-bottom: 20px;
+  }
+  #footer .btmmenu .companyinfo a {
+    font-size: 14px;
+    margin-right: 15px;
+    transition: all 0.2s;
+  }
+  #footer .btmmenu .companyinfo a:hover {
+    color: #125587;
+    font-weight: bold;
+  }
+  #footer .btmmenu .sns {
+    float: right;
+    margin-left: 50px;
+    padding: 10px 0;
+    color: #333;
+    width: 100%;
+  }
+  #footer .btmmenu .sns a {
+    display: inline-block;
+    padding: 10px;
+  }
+  #footer .btmmenu .sns a:hover {
+    color: #125587;
+  }
+  #footer .btmmenu .addr {
+    padding: 10px 10px 10px 0;
+  }
+  #footer .btmmenu .addr p {
+    font-size: 13px;
+  }
+  #footer span {
+    display: block;
+  }
+  #footer span.slash {
+    display: none;
+  }
+}

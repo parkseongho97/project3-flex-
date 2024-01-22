@@ -1,0 +1,511 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR";
+}
+ul {
+  list-style: none;
+}
+.blind {
+  position: absolute;
+  left: -9999px;
+  overflow: hidden;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+.cf::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.row {
+  margin: 0 auto;
+  max-width: 1170px;
+}
+#header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background-color: rgb(255, 255, 255);
+}
+#header .row {
+  display: flex;
+  justify-content: space-between;
+}
+#header h1 {
+  /* float: left; */
+  padding: 20px;
+}
+#header .menuopen {
+  display: none;
+}
+#header #nav {
+  float: flex;
+}
+#header #nav .depth1 {
+  display: flex;
+}
+
+#header #nav .depth1 > li {
+  float: flex;
+  align-items: center;
+  position: relative;
+  margin: 10px 20px 0px 0px;
+  font-size: 17px;
+  font-weight: bold;
+  color: #333;
+}
+#header #nav .depth1 > li > a {
+  display: flex;
+  padding: 0px 15px;
+  line-height: 105px;
+  color: #171717;
+}
+#header #nav .depth1 > li > a::after {
+}
+#header #nav .depth1 > li:hover .depth2 {
+  display: block;
+  background-color: #fff;
+}
+
+#header #nav .depth2 {
+  position: absolute;
+  left: 0%;
+  width: 120px;
+  background-color: #ff0000;
+  display: none;
+  transition: all 0.2s;
+}
+#header #nav .depth2 > li {
+}
+
+#header #nav .depth2 > li > a {
+  padding: 15px 0;
+  display: block;
+  transition: all 0.5s;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  font-size: 14px;
+  text-align: center;
+}
+#header #nav .depth2 > li > a:hover {
+  background-color: #125587;
+  color: white;
+}
+
+/* 슬라이드구역 */
+#section .slideOuter .slideInner {
+  position: relative;
+}
+#section .slideOuter .slideInner button.slick-arrow {
+  border: none;
+  background: none;
+  font-size: 50px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+}
+#section .slideOuter .slideInner button.slick-next {
+  right: 50px;
+}
+#section .slideOuter .slideInner button.slick-prev {
+  left: 50px;
+  z-index: 999;
+}
+#section .slideOuter .slideInner ul.slick-dots {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 10%;
+}
+#section .slideOuter .slideInner ul.slick-dots li {
+  display: inline-block;
+  margin: 0 3px;
+}
+#section .slideOuter .slideInner ul.slick-dots li button {
+  width: 9px;
+  height: 9px;
+  text-indent: 99999px;
+  border: 1px solid white;
+  border-radius: 50px;
+  background: transparent;
+  transition: all 0.2s;
+}
+#section .slideOuter .slideInner ul.slick-dots li.slick-active button {
+  border: 1px solid white;
+  background: white;
+  width: 18px;
+}
+
+/* 슬라이더멈춤버튼 */
+#section .slideOuter {
+  position: relative;
+}
+#section .slideOuter .plapau {
+  position: absolute;
+  bottom: 77px;
+  left: 50%;
+  margin-left: 40px;
+  color: white;
+  font-size: 15px;
+}
+
+#section .slide {
+  height: 700px;
+  position: relative;
+}
+
+#section .slide1 {
+  background: url(../img/slide01.jpg) no-repeat center / cover;
+}
+#section .slide2 {
+  background: url(../img/slide02.jpg) no-repeat center / cover;
+}
+#section .slide3 {
+  background: url(../img/slide03.jpg) no-repeat center / cover;
+}
+#section .slide4 {
+  background: url(../img/slide04.jpg) no-repeat center / cover;
+}
+
+#section .slide .text > img {
+  width: 100%;
+}
+#section .slide .text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+#section .slide .text h2 {
+  font-size: 4vh;
+  margin: 0 0 25px;
+  font-weight: bold;
+  opacity: 0;
+  transform: translate3d(0, 100%, 0);
+  word-break: keep;
+}
+#section .slick-current.slick-active.slide .text h2 {
+  animation: fadeInUp 1s 1 both 0.3s;
+}
+#section .slide .text p {
+  font-size: 18px;
+  opacity: 0;
+  transform: translate3d(0, 100%, 0);
+}
+#section .slick-current.slick-active.slide .text p {
+  animation: fadeInUp 1s 1 both 1.3s;
+}
+#About {
+  width: 100%;
+}
+
+#About > .text1 {
+  color: #333;
+  text-align: center;
+  margin: 80px 0 50px;
+}
+#About > .text1 > h2 {
+  font-size: 40px;
+  color: #337550;
+}
+#About > .text1 > p {
+  font-size: 15px;
+  line-height: 1.7em;
+  padding-top: 20px;
+}
+#About .contents ul {
+  /* overflow: hidden; */
+  display: flex;
+}
+#About .contents ul li {
+  /* float: left; */
+  /* width: 33.33%; */
+  /* text-align: center; */
+  flex: 1;
+  padding: 10px;
+  color: #333;
+}
+#About > .contents > .product > li h2 {
+  font-size: 20px;
+  padding-top: 25px;
+  font-weight: 300;
+}
+#About > .contents > .product > li p {
+  font-size: 14px;
+  padding: 25px 0;
+}
+#About > .contents > .product > li a {
+  display: block;
+  position: relative;
+}
+#About > .contents > .product > li .awesome {
+  font-size: 14px;
+  color: #000;
+  padding-right: 5px;
+  margin-bottom: 30px;
+}
+#About > .contents > .product .photo {
+  overflow: hidden;
+}
+#About > .contents > .product > li a img {
+  transition: all 0.5s;
+  transform: scale(1.05);
+  transform-origin: center top;
+}
+#About > .contents > .product > li a img:hover {
+  transform: scale(1.04);
+}
+#section #creative {
+  display: flex;
+  padding: 100px 0;
+  background: #fafafa;
+  margin-top: 50px;
+}
+#section #creative > .videobox {
+  /* float: left; */
+  width: 100%;
+  flex: 1;
+}
+
+#section #creative > .text {
+  /* float: left; */
+  flex: 1;
+  /* width: 50%; */
+  padding: 0px 50px;
+}
+#section #creative > .text h2 {
+  font-size: 40px;
+  line-height: 1.2em;
+  border-top: 1px solid #5a370f;
+  padding-top: 30px;
+  color: #5a370f;
+  color: ;
+}
+#section #creative .text h2 span {
+  display: block;
+}
+#section #creative .text p {
+  font-size: 14px;
+  /* 단어잘림 허용안함 */
+  word-break: keep-all;
+  line-height: 1.5em;
+  padding-right: 100px;
+}
+#section #creative .text p strong {
+  display: block;
+  font-size: 20px;
+  padding: 40px 0;
+}
+
+#section #creative .text a {
+  display: block;
+  margin-top: 50px;
+}
+#section .items {
+  text-align: center;
+  padding: 120px 0 60px;
+}
+
+#section .itemsName {
+  color: #333;
+}
+#section .itemsName span {
+  display: block;
+}
+#section .photo1 {
+  /* overflow: hidden; */
+  display: flex;
+  /* 자식들을 여러줄로 정렬할때 flex-wrap:wrap; 속성 추가 */
+  flex-wrap: wrap;
+  justify-content: left;
+}
+#section .itemsList ul li {
+  /* float: left; */
+  border: 1px solid #000;
+  flex: 0 1 20%;
+  /* width: 20%; */
+  padding: 10px;
+  overflow: hidden;
+}
+#section .itemsList ul li > a {
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+#section .itemsList ul li > a .overbox {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 20px;
+  padding-top: 60%;
+  opacity: 0;
+  transition: all 0.5s;
+}
+#section .itemsList ul li:hover > a .overbox {
+  opacity: 1;
+}
+
+#section .itemsList > .photo1 > li img {
+  transition: all 0.5s;
+}
+#section .itemsList > .photo1 > li:hover img {
+  transform: scale(1.2);
+}
+
+#section .itemsName > h2 {
+  font-size: 40px;
+  padding-bottom: 30px;
+  font-weight: lighter;
+}
+#section .itemsName > p {
+  font-size: 14px;
+  line-height: 1.8em;
+  margin-bottom: 70px;
+}
+#section .contact {
+  margin-top: -200px;
+  padding: 50px 0;
+  border-bottom: 1px solid rgb(230, 230, 230);
+}
+#section .contact .row {
+  /* overflow: hidden; */
+  display: flex;
+}
+#section .contact .map {
+  /* float: left; */
+  flex: 1;
+  /* width: 100%; */
+}
+#section .contact .query {
+  /* float: left; */
+  flex: 1;
+  /* width: 100%; */
+  background-color: #fff;
+  height: 450px;
+  padding: 60px 0px 0 60px;
+  color: #333;
+}
+#section .contact .query h3 {
+  font-size: 25px;
+  color: #e71919;
+}
+#section .contact .query p {
+  font-size: 17px;
+}
+#section .contact .query p.greeting {
+  padding: 30px 0;
+  font-weight: bold;
+}
+#section .contact .query p span {
+  display: block;
+}
+#section .contact .query p.address {
+  font-size: 14px;
+  line-height: 1.7em;
+  margin-bottom: 70px;
+}
+#section .contact .query p.btn {
+  color: white;
+}
+#section .contact .query p.btn > a {
+  background: #1a1a1a;
+  padding: 15px 50px;
+  display: inline-block;
+  margin-right: 5px;
+}
+#section .contact .query p.btn > a:nth-child(2) {
+  background: #333;
+  padding: 15px 50px;
+  display: inline-block;
+}
+#section .best {
+  background: url(../img/service.jpg) right center / cover;
+  height: 580px;
+  text-align: center;
+}
+#section .best .row {
+  padding: 120px;
+}
+
+#section .best h2 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #262626;
+}
+#section .best p {
+  font-size: 15px;
+  padding: 30px;
+}
+#footer {
+  padding: 50px 0;
+}
+#footer .row {
+  /* overflow: hidden; */
+  display: flex;
+  justify-content: space-between;
+}
+#footer .btmlogo {
+  /* float: left; */
+  flex: 1;
+  margin-top: 40px;
+}
+#footer .btmmenu {
+  /* float: right; */
+  flex: 1;
+  padding: 0px 0;
+  align-items: left;
+}
+
+#footer .btmmenu .companyinfo {
+  /* float: left; */
+  color: #333;
+}
+#footer .btmmenu .companyinfo .list {
+  padding-bottom: 20px;
+}
+#footer .btmmenu .companyinfo a {
+  font-size: 14px;
+  margin-right: 15px;
+  transition: all 0.2s;
+}
+#footer .btmmenu .companyinfo a:hover {
+  color: #125587;
+  font-weight: bold;
+}
+#footer .btmmenu .sns {
+  /* float: right; */
+  flex: 1;
+  padding: 0px 0;
+  color: #333;
+}
+#footer .btmmenu .sns a {
+  display: inline-block;
+  padding: 10px;
+}
+#footer .btmmenu .sns a:hover {
+  color: #125587;
+}
+#footer .btmmenu .addr {
+  padding: 10px 10px 10px 0;
+}
+#footer .btmmenu .addr p {
+  font-size: 13px;
+}
